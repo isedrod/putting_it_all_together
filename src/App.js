@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MyNewComponent from './components/MyNewComponent';
+import Counter from './components/Counter'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyNewComponent/>
+      <Counter title="Number of bugs in my code"/>
+      <Counter title="Hours talked to rubber ducky" start={5} step={2}/>
+      <Counter title="Hours talked to rubber ducky" start={150} step={25}/>
+      <Counter title="Hours talked to rubber ducky" start={15055949} step={-252}/>
     </div>
   );
 }
